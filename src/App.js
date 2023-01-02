@@ -10,7 +10,7 @@ function App() {
       <header>
         <nav>
           <h1>JobARouter</h1>
-          <Link to="/">Home</Link>
+          <NavLink to="/">Home</NavLink>
           <NavLink to="about">About</NavLink>
         </nav>
       </header>
