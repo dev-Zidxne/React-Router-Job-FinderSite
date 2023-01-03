@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom"
 
 export default function NotFound() {
   return (
     <div>
-      <h2>Page Not Found :l</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,
-        quo minus similique sequi voluptate beatae sunt magnam nostrum
-        asperiores numquam.
-      </p>
-      <p>
-        Go to the <Link to="/">Homepage</Link>
-      </p>
+      <h2>Page not found!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia alias cupiditate ad nostrum doloribus iste tempora quisquam excepturi repellat, fugit cumque dolore magni possimus inventore neque provident! Sunt, quo eos?</p>
+
+      <p>Go to the <NavLink to="/">Homepage</NavLink>.</p>
     </div>
-  );
+  )
 }

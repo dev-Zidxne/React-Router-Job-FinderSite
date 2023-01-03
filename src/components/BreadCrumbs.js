@@ -1,22 +1,25 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom"
 
-export default function BreadCrumbs() {
-  const location = useLocation();
+export default function Breadcrumbs() {
+  const location = useLocation()
 
-  let currentLink = "";
+  let currentLink = ''
 
-  const crumbs = location.pathname
-    .split("/")
-    .filter((crumb) => crumb !== "")
-    .map((crumb) => {
-      currentLink += `/${crumb}`;
+  const crumbs = location.pathname.split('/')
+    .filter(crumb => crumb !== '')
+    .map(crumb => {
+      currentLink += `/${crumb}`
 
       return (
         <div className="crumb" key={crumb}>
           <Link to={currentLink}>{crumb}</Link>
         </div>
-      );
-    });
+      )
+    })
 
-  return <div className="breadcrumbs">{crumbs}</div>;
+  return (
+    <div className="breadcrumbs">
+      {crumbs}
+    </div>
+  )
 }
